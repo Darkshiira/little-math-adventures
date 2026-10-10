@@ -2,7 +2,7 @@
 "use client";
 
 import { Link } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const fruits = [
   { emoji: "🍎", name: "äpplen" },
@@ -69,9 +69,6 @@ export default function FruktlandetPage() {
   choices: [4, 5, 6],
 });
 
-useEffect(() => {
-  setQuestion(createQuestion());
-}, []);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [score, setScore] = useState(0);

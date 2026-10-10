@@ -24,13 +24,11 @@ export default function Header() {
           aria-label="Matteäventyret – till startsidan"
           className="flex shrink-0 items-center gap-2.5 rounded-lg"
         >
-          <span
-            aria-hidden="true"
-            className="flex size-10 items-center justify-center rounded-2xl bg-mint text-2xl"
-          >
-            🦊
-          </span>
-
+          <img
+            src="/images/faviconfox.png"
+            alt="Matteäventyret logotyp"
+            className="h-10 w-10 rounded-full object-cover"
+          />
           <span className="flex flex-col leading-tight">
             <span className="text-base font-extrabold tracking-tight text-forest sm:text-lg">
               Matteäventyret
