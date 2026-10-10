@@ -1,69 +1,156 @@
-import Image from "next/image";
+import { activities } from "../data/games";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div id="hem">
+      {/* Välkomstsektion */}
+      <section className="overflow-hidden px-4 py-12 sm:px-6 sm:py-20">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2">
+          <div>
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#C9E8D9] bg-white px-4 py-2 text-sm font-bold text-forest">
+              <span aria-hidden="true">✨</span>
+              Matte för nyfikna barn
+            </span>
+
+            <h1 className="mt-6 max-w-xl text-4xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl lg:text-6xl">
+              Små steg.
+              <br />
+              <span className="text-forest">Stora upptäckter!</span>
+            </h1>
+
+            <p className="mt-5 max-w-lg text-base leading-7 text-muted sm:text-lg">
+              Följ med på roliga äventyr där vi räknar,
+              klurar och lär oss matematik tillsammans.
+              Är du redo att börja?
+            </p>
+
+            <Link
+              href="#aventyr"
+              className="mt-7 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-forest px-7 py-3 font-extrabold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-[#105347]"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              Hitta ett äventyr
+              <span aria-hidden="true">→</span>
+            </Link>
+
+            <p className="mt-4 text-sm font-semibold text-muted">
+              🌟 Öva i din egen takt!
+            </p>
+          </div>
+
+          <div className="relative flex min-h-64 items-center justify-center rounded-[2rem] bg-mint p-8 sm:min-h-80">
+            <div
+              aria-hidden="true"
+              className="absolute left-8 top-8 text-4xl"
             >
-              Learning
-            </a>{" "}
-            center.
+              ✨
+            </div>
+            <div
+              aria-hidden="true"
+              className="absolute bottom-8 right-8 text-4xl"
+            >
+              🌼
+            </div>
+
+            <div className="relative rounded-[2rem] border-4 border-white bg-white p-8 text-center shadow-lg sm:p-10">
+              <div className="text-7xl sm:text-8xl" aria-hidden="true">
+                🦊
+              </div>
+              <p className="mt-3 text-xl font-extrabold text-forest">
+                Hej, mattekompis!
+              </p>
+              <p className="mt-2 text-sm text-muted">
+                Ska vi lösa en kluring?
+              </p>
+
+              <div className="mt-5 flex justify-center gap-3 text-3xl">
+                <span aria-label="Två äpplen">🍎</span>
+                <span aria-hidden="true">+</span>
+                <span aria-label="Ett äpple">🍎</span>
+                <span aria-hidden="true">=</span>
+                <span aria-label="Tre äpplen">🍎</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Välj ett äventyr */}
+      <section
+        id="aventyr"
+        className="border-y border-[#E9E4DA] bg-white px-4 py-12 sm:px-6 sm:py-16"
+      >
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center">
+            <p className="text-sm font-extrabold uppercase tracking-widest text-forest">
+              Ditt nästa uppdrag
+            </p>
+            <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
+              Vart ska vi åka?
+            </h2>
+            <p className="mx-auto mt-3 max-w-xl leading-7 text-muted">
+              Välj en värld och upptäck hur roligt matte kan vara.
+            </p>
+          </div>
+
+          <div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {activities.map((activity) => (
+              <article
+                key={activity.title}
+                className="group rounded-3xl border border-[#E9E4DA] bg-white p-5 transition hover:-translate-y-1 hover:shadow-lg"
+              >
+                <div
+                  className={`flex min-h-36 items-center justify-center rounded-2xl text-6xl ${activity.color}`}
+                >
+                  <span aria-hidden="true">{activity.emoji}</span>
+                </div>
+
+                <p className="mt-5 text-xs font-extrabold uppercase tracking-wider text-forest">
+                  {activity.tag}
+                </p>
+                <h3 className="mt-2 text-xl font-extrabold">
+                  {activity.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-muted">
+                  {activity.description}
+                </p>
+
+                <a
+                  href={activity.href}
+                  className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-full bg-cream px-5 py-2 font-extrabold text-forest transition group-hover:bg-mint"
+                >
+                  Utforska <span aria-hidden="true">→</span>
+                </a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Förklaring */}
+      <section
+        id="sa-fungerar-det"
+        className="px-4 py-12 sm:px-6 sm:py-16"
+      >
+        <div className="mx-auto max-w-4xl rounded-3xl bg-[#FFF0D5] p-7 sm:p-10">
+          <h2 className="text-2xl font-extrabold sm:text-3xl">
+            Här får man lära genom att leka
+          </h2>
+          <p className="mt-3 max-w-2xl leading-7 text-muted">
+            Räkna saker, prova olika svar och upptäck nya
+            sätt att tänka. Det är okej att göra fel – varje
+            försök hjälper oss att lära oss mer!
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section id="for-vuxna" className="px-4 pb-12 sm:px-6">
+        <div className="mx-auto max-w-6xl text-center">
+          <p className="text-sm text-muted">
+            En trygg och lekfull plats att öva matematik.
+          </p>
         </div>
-      </main>
+      </section>
     </div>
   );
 }
