@@ -149,9 +149,7 @@ function shuffleRounds(items: Round[]): Round[] {
 
 export default function DjurensVarldPage() {
 
-const [gameRounds, setGameRounds] = useState<Round[]>(() =>
-  shuffleRounds(rounds)
-);
+const [gameRounds, setGameRounds] = useState<Round[]>(rounds);
 const [roundIndex, setRoundIndex] = useState(0);
 const [foundAnimals, setFoundAnimals] = useState<string[]>([]);
 const [message, setMessage] = useState(
