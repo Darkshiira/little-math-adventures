@@ -12,7 +12,7 @@ export default function Footer() {
         </a>
 
         <p className="text-xs leading-5 text-muted">
-          Matte blir roligare när vi upptäcker tillsammans!
+          Matematik blir roligare när vi upptäcker tillsammans!
         </p>
 
         <a

@@ -34,3 +34,15 @@ a:focus-visible {
   outline: 3px solid var(--color-forest);
   outline-offset: 4px;
 }
+
+@keyframes forestOops {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+  }
+  20%, 60% {
+    transform: translateX(-4px) translateY(-1px);
+  }
+  40%, 80% {
+    transform: translateX(4px) translateY(1px);
+  }
+}

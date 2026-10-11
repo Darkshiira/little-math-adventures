@@ -289,7 +289,7 @@ export default function FruktlandetPage() {
                 </p>
 
                 <p className="mt-2 text-muted">
-                  Varje gång du övar blir du bättre på matte.
+                  Varje gång du övar blir du bättre på matematik.
                 </p>
 
                 <button

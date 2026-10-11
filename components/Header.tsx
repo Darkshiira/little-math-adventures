@@ -34,7 +34,7 @@ export default function Header() {
               Matteäventyret
             </span>
             <span className="mt-0.5 text-[11px] font-semibold text-muted">
-              Upptäck matte tillsammans!
+              Upptäck matematik tillsammans!
             </span>
           </span>
         </Link>

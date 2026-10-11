@@ -4,7 +4,7 @@ export const activities = [
     title: "Sifferjakten",
     description: "Lär känna siffror genom lek.",
     color: "bg-[#DDEBFF]",
-    href: "#siffror",
+    href: "/activities/sifferjakten",
     tag: "Sifferigenkänning",
   },  
   {
@@ -12,7 +12,7 @@ export const activities = [
     title: "Djurens värld",
     description: "Räkna djur och upptäck talen.",
     color: "bg-[#DDF3E8]",
-    href: "#rakna",
+    href: "/activities/djurens-varld",
     tag: "Tal och antal",
   },
 {
@@ -24,11 +24,11 @@ export const activities = [
   tag: "Addition",
 },
     {
-    emoji: "🦊",
+    emoji: "🌲",
     title: "Skogsvandringen",
     description: "Utforska skogen och lös subtraktion.",
     color: "bg-[#F8E8D9]",
-    href: "#subtraktion",
+    href: "/activities/skogsvandringen",
     tag: "Subtraktion",
   }
 
