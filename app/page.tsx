@@ -41,7 +41,7 @@ export default function Home() {
             <div className="relative z-10">
               <span className="inline-flex items-center gap-2 rounded-full bg-[#CFF0DB] px-4 py-2 text-sm font-extrabold text-[#14775F] sm:text-base">
                 <span aria-hidden="true">✨</span>
-                Matte för nyfikna barn
+                Matematik för nyfikna barn
               </span>
 
               <h1 className="mt-5 text-4xl font-black leading-[1.08] tracking-tight text-[#12584D] sm:text-5xl lg:text-6xl xl:text-7xl">
@@ -102,7 +102,7 @@ export default function Home() {
             </h2>
 
             <p className="mx-auto mt-2 max-w-xl text-base leading-7 text-[#527C75] sm:text-lg">
-              Välj en värld och upptäck hur roligt matte kan vara.
+              Välj en värld och upptäck hur roligt matematik kan vara.
             </p>
           </header>
 
