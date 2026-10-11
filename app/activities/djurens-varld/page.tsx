@@ -295,7 +295,7 @@ function shuffleRounds(items: Round[]): Round[] {
 
 export default function DjurensVarldPage() {
   const [selectedScene, setSelectedScene] = useState<SceneKey | null>(null);
-  const [gameRounds, setGameRounds] = useState<Round[]>(() => shuffleRounds(forestRounds));
+  const [gameRounds, setGameRounds] = useState<Round[]>(forestRounds);
   const [roundIndex, setRoundIndex] = useState(0);
   const [foundAnimals, setFoundAnimals] = useState<string[]>([]);
   const [message, setMessage] = useState("Ta god tid på dig och titta noga!");
