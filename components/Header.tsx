@@ -13,7 +13,7 @@ const links = [
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
-  const isPlaying = pathname.startsWith("/activities/");
+  const isPlaying = pathname.startsWith("/activities/") || pathname.startsWith("/om-mig/");
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#E9E4DA] bg-white/95 backdrop-blur">
@@ -57,7 +57,7 @@ export default function Header() {
 
         <div className="flex shrink-0 items-center gap-2">
           {!isPlaying && (<Link
-            href="#aventyr"
+             href={!isPlaying ? "/" : "#aventyr"}
             className="hidden rounded-full bg-forest px-5 py-2.5 text-sm font-extrabold text-white shadow-sm transition hover:bg-[#105347] sm:inline-flex"
           >
             Börja spela <span aria-hidden="true" className="ml-1">→</span>
@@ -95,7 +95,7 @@ export default function Header() {
 
             {!isPlaying && (
                 <Link
-                    href="#aventyr"
+                     href={!isPlaying ? "/" : "/#aventyr"}
                     onClick={() => setMenuOpen(false)}
                     className="mt-2 rounded-xl bg-forest px-4 py-3 text-center font-extrabold text-white"
                 >
