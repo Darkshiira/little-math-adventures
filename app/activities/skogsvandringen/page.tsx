@@ -83,7 +83,7 @@ const firstChallenge: Challenge = {
 };
 
 export default function SkogsvandringenPage() {
-  const [challenge, setChallenge] = useState<Challenge>(makeChallenge);
+  const [challenge, setChallenge] = useState<Challenge>(firstChallenge);
   const [removed, setRemoved] = useState<number[]>([]);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [solved, setSolved] = useState(false);
