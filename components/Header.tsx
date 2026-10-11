@@ -6,9 +6,8 @@ import {usePathname} from "next/navigation";
 import Link from "next/link";
 
 const links = [
-  { label: "Äventyr", href: "#aventyr" },
-  { label: "Så fungerar det", href: "#sa-fungerar-det" },
-  { label: "För vuxna", href: "#for-vuxna" },
+  { label: "Äventyr", href: "/#aventyr" },
+  { label: "Om mig", href: "/om-mig" },
 ];
 
 export default function Header() {
