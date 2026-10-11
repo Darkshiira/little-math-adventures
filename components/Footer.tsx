@@ -16,7 +16,7 @@ export default function Footer() {
         </p>
 
         <a
-          href="/Om-mig"
+          href="/om-mig"
           className="self-start rounded-lg py-1 text-xs font-bold text-forest underline-offset-4 hover:underline sm:self-auto"
         >
           Om mig
