@@ -1,6 +1,7 @@
-
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Nunito } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 import Header from "@/components/Header";
@@ -27,8 +28,14 @@ export default function RootLayout({
     <html lang="sv" className={nunito.variable}>
       <body className="flex min-h-screen flex-col">
         <Header />
+
         <main className="flex-1">{children}</main>
+
         <Footer />
+
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>
       </body>
     </html>
   );
